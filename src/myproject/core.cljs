@@ -8,7 +8,7 @@
   [:p "Hi, I am " name])
 
 (defn childcaller []
-  [child "Foo Bar"])
+  [child "Brent"])
 
 (reagent/render-component [childcaller]
                            (.getElementById js/document "app"))

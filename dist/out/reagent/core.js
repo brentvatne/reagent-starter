@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2496
+// Compiled by ClojureScript 0.0-2511
 goog.provide('reagent.core');
 goog.require('cljs.core');
 goog.require('reagent.impl.util');
@@ -199,23 +199,23 @@ var atom__1 = (function (x){
 return reagent.ratom.atom.call(null,x);
 });
 var atom__2 = (function() { 
-var G__5395__delegate = function (x,rest){
+var G__5295__delegate = function (x,rest){
 return cljs.core.apply.call(null,reagent.ratom.atom,x,rest);
 };
-var G__5395 = function (x,var_args){
+var G__5295 = function (x,var_args){
 var rest = null;
 if (arguments.length > 1) {
   rest = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);
 } 
-return G__5395__delegate.call(this,x,rest);};
-G__5395.cljs$lang$maxFixedArity = 1;
-G__5395.cljs$lang$applyTo = (function (arglist__5396){
-var x = cljs.core.first(arglist__5396);
-var rest = cljs.core.rest(arglist__5396);
-return G__5395__delegate(x,rest);
+return G__5295__delegate.call(this,x,rest);};
+G__5295.cljs$lang$maxFixedArity = 1;
+G__5295.cljs$lang$applyTo = (function (arglist__5296){
+var x = cljs.core.first(arglist__5296);
+var rest = cljs.core.rest(arglist__5296);
+return G__5295__delegate(x,rest);
 });
-G__5395.cljs$core$IFn$_invoke$arity$variadic = G__5395__delegate;
-return G__5395;
+G__5295.cljs$core$IFn$_invoke$arity$variadic = G__5295__delegate;
+return G__5295;
 })()
 ;
 atom = function(x,var_args){
@@ -292,9 +292,9 @@ if (arguments.length > 1) {
 } 
 return partial__delegate.call(this,f,args);};
 partial.cljs$lang$maxFixedArity = 1;
-partial.cljs$lang$applyTo = (function (arglist__5397){
-var f = cljs.core.first(arglist__5397);
-var args = cljs.core.rest(arglist__5397);
+partial.cljs$lang$applyTo = (function (arglist__5297){
+var f = cljs.core.first(arglist__5297);
+var args = cljs.core.rest(arglist__5297);
 return partial__delegate(f,args);
 });
 partial.cljs$core$IFn$_invoke$arity$variadic = partial__delegate;

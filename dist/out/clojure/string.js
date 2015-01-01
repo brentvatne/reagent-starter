@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2496
+// Compiled by ClojureScript 0.0-2511
 goog.provide('clojure.string');
 goog.require('cljs.core');
 goog.require('goog.string.StringBuffer');
@@ -53,10 +53,10 @@ var sb = (new goog.string.StringBuffer());
 var coll__$1 = cljs.core.seq.call(null,coll);
 while(true){
 if(coll__$1){
-var G__5422 = sb.append([cljs.core.str(cljs.core.first.call(null,coll__$1))].join(''));
-var G__5423 = cljs.core.next.call(null,coll__$1);
-sb = G__5422;
-coll__$1 = G__5423;
+var G__5322 = sb.append([cljs.core.str(cljs.core.first.call(null,coll__$1))].join(''));
+var G__5323 = cljs.core.next.call(null,coll__$1);
+sb = G__5322;
+coll__$1 = G__5323;
 continue;
 } else {
 return sb.toString();
@@ -77,10 +77,10 @@ if((coll__$2 == null)){
 sb.append(separator);
 }
 
-var G__5424 = sb;
-var G__5425 = coll__$2;
-sb = G__5424;
-coll__$1 = G__5425;
+var G__5324 = sb;
+var G__5325 = coll__$2;
+sb = G__5324;
+coll__$1 = G__5325;
 continue;
 } else {
 return sb.toString();
@@ -129,8 +129,8 @@ clojure.string.pop_last_while_empty = (function pop_last_while_empty(v){
 var v__$1 = v;
 while(true){
 if(cljs.core._EQ_.call(null,"",cljs.core.peek.call(null,v__$1))){
-var G__5426 = cljs.core.pop.call(null,v__$1);
-v__$1 = G__5426;
+var G__5326 = cljs.core.pop.call(null,v__$1);
+v__$1 = G__5326;
 continue;
 } else {
 return v__$1;
@@ -149,12 +149,12 @@ clojure.string.split_with_empty_regex = (function split_with_empty_regex(s,limit
 if(((limit <= (0))) || ((limit >= ((2) + cljs.core.count.call(null,s))))){
 return cljs.core.conj.call(null,cljs.core.vec.call(null,cljs.core.cons.call(null,"",cljs.core.map.call(null,cljs.core.str,cljs.core.seq.call(null,s)))),"");
 } else {
-var pred__5430 = cljs.core._EQ_;
-var expr__5431 = limit;
-if(cljs.core.truth_(pred__5430.call(null,(1),expr__5431))){
+var pred__5330 = cljs.core._EQ_;
+var expr__5331 = limit;
+if(cljs.core.truth_(pred__5330.call(null,(1),expr__5331))){
 return (new cljs.core.PersistentVector(null,1,(5),cljs.core.PersistentVector.EMPTY_NODE,[s],null));
 } else {
-if(cljs.core.truth_(pred__5430.call(null,(2),expr__5431))){
+if(cljs.core.truth_(pred__5330.call(null,(2),expr__5331))){
 return (new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,["",s],null));
 } else {
 var c = (limit - (2));
@@ -184,12 +184,12 @@ var temp__4124__auto__ = cljs.core.re_find.call(null,re,s__$1);
 if(cljs.core.truth_(temp__4124__auto__)){
 var m = temp__4124__auto__;
 var index = s__$1.indexOf(m);
-var G__5433 = s__$1.substring((index + cljs.core.count.call(null,m)));
-var G__5434 = (limit__$1 - (1));
-var G__5435 = cljs.core.conj.call(null,parts,s__$1.substring((0),index));
-s__$1 = G__5433;
-limit__$1 = G__5434;
-parts = G__5435;
+var G__5333 = s__$1.substring((index + cljs.core.count.call(null,m)));
+var G__5334 = (limit__$1 - (1));
+var G__5335 = cljs.core.conj.call(null,parts,s__$1.substring((0),index));
+s__$1 = G__5333;
+limit__$1 = G__5334;
+parts = G__5335;
 continue;
 } else {
 return cljs.core.conj.call(null,parts,s__$1);
@@ -251,8 +251,8 @@ return "";
 } else {
 var ch = cljs.core.get.call(null,s,(index - (1)));
 if((cljs.core._EQ_.call(null,ch,"\n")) || (cljs.core._EQ_.call(null,ch,"\r"))){
-var G__5436 = (index - (1));
-index = G__5436;
+var G__5336 = (index - (1));
+index = G__5336;
 continue;
 } else {
 return s.substring((0),index);
@@ -283,16 +283,16 @@ if(cljs.core._EQ_.call(null,length,index)){
 return buffer.toString();
 } else {
 var ch = s.charAt(index);
-var temp__4124__auto___5437 = cljs.core.get.call(null,cmap,ch);
-if(cljs.core.truth_(temp__4124__auto___5437)){
-var replacement_5438 = temp__4124__auto___5437;
-buffer.append([cljs.core.str(replacement_5438)].join(''));
+var temp__4124__auto___5337 = cljs.core.get.call(null,cmap,ch);
+if(cljs.core.truth_(temp__4124__auto___5337)){
+var replacement_5338 = temp__4124__auto___5337;
+buffer.append([cljs.core.str(replacement_5338)].join(''));
 } else {
 buffer.append(ch);
 }
 
-var G__5439 = (index + (1));
-index = G__5439;
+var G__5339 = (index + (1));
+index = G__5339;
 continue;
 }
 break;
