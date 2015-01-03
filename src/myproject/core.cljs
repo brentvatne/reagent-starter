@@ -4,11 +4,12 @@
               [goog.history.EventType :as EventType])
     (:import goog.History))
 
-(defn child [name]
+(defn child-component [name]
   [:p "Hi, I am " name])
 
-(defn childcaller []
-  [child "Brent"])
+(defn parent-component []
+  [child-component "Brent"])
 
-(reagent/render-component [childcaller]
-                           (.getElementById js/document "app"))
+(defn ^:export main [container-id]
+  (reagent/render-component [parent-component]
+                             (.getElementById js/document container-id)))

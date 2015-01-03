@@ -14,12 +14,20 @@
                  [org.clojure/clojurescript "0.0-2511" :scope "provided"]
                  [leiningen "2.5.0"]]
 
-  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]]
+  :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]
+            [com.cemerick/clojurescript.test "0.3.3"]]
 
-  :cljsbuild {:builds
-    {:default {:source-paths ["src"]
-               :compiler {:output-to     "dist/main.js"
-                          :output-dir    "dist/out"
-                          :externs       ["react/externs/react.js"]
-                          :optimizations :simple
-                          :pretty-print  true}}}})
+  :cljsbuild {:builds {:app {:source-paths ["src"]
+                             :compiler {:output-to     "build/main.js"
+                                        :externs       ["react/externs/react.js"]
+                                        :optimizations :simple
+                                        :pretty-print  true}}
+                       :test {:source-paths ["src" "test"]
+                              :compiler {:output-to     "build/test.js"
+                                         :externs       ["react/externs/react.js"]
+                                         :optimizations :simple
+                                         :pretty-print  true}}}
+
+              :test-commands {"unit" ["phantomjs"
+                                      "test/runner.js"
+                                      "test/runner.html"]}})

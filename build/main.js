@@ -7321,7 +7321,8 @@ cljs.core.nil_iter = function nil_iter() {
   }, cljs.core.__GT_t5981 = function(b, c) {
     return new cljs.core.t5981(b, c);
   });
-  return new cljs.core.t5981(nil_iter, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 54, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 3007, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 3003, new cljs.core.Keyword(null, "file", "file", -1269645878), "/Users/brentvatne/coding/base-reagent-project/dist/out/cljs/core.cljs"], null));
+  return new cljs.core.t5981(nil_iter, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 54, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 3007, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 3003, new cljs.core.Keyword(null, "file", "file", -1269645878), "/Users/brentvatne/coding/base-reagent-project/target/cljsbuild-compiler-0/cljs/core.cljs"], 
+  null));
 };
 cljs.core.StringIter = function(a, b) {
   this.s = a;
@@ -20943,10 +20944,13 @@ goog.History.PollingType = {NORMAL:150, LONG:1E4};
 goog.History.EventType = goog.history.EventType;
 goog.History.Event = goog.history.Event;
 var myproject = {core:{}};
-myproject.core.child = function(a) {
+myproject.core.child_component = function(a) {
   return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 151049309), "Hi, I am ", a], null);
 };
-myproject.core.childcaller = function() {
-  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [myproject.core.child, "Brent"], null);
+myproject.core.parent_component = function() {
+  return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [myproject.core.child_component, "Brent"], null);
 };
-reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [myproject.core.childcaller], null), document.getElementById("app"));
+myproject.core.main = function(a) {
+  return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [myproject.core.parent_component], null), document.getElementById(a));
+};
+goog.exportSymbol("myproject.core.main", myproject.core.main);

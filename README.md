@@ -16,3 +16,11 @@ Successfully compiled "dist/main.js" in 20.927 seconds.
 ```
 - Successive changes should be much compiled much more quickly than the first run.
 - Open `index.html` again, you should see the changes.
+
+## Run tests
+
+- `lein cljsbuild test` will run the tests once. I couldn't see how to
+  make this run them each time the file changes, so I instead do `lein
+  cljsbuild auto test` and then manually run `phantomjs test/runner.js
+  test/runner.html`. See the existing test file for an example of how to
+  test rendering components.
