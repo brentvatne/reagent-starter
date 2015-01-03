@@ -17,15 +17,9 @@
   :plugins [[lein-cljsbuild "1.0.4-SNAPSHOT"]]
 
   :cljsbuild {:builds
-    {:app    {:source-paths ["src"]
-              :compiler {:output-to     "dist/main-none.js"
-                         :output-dir    "dist/out-none"
-                         :externs       ["react/externs/react.js"]
-                         :optimizations :none
-                         :pretty-print  true}}
-     :simple {:source-paths ["src"]
-              :compiler {:output-to     "dist/main-simple.js"
-                         :output-dir    "dist/out-simple"
-                         :externs       ["react/externs/react.js"]
-                         :optimizations :simple
-                         :pretty-print  true}}}})
+    {:default {:source-paths ["src"]
+               :compiler {:output-to     "dist/main.js"
+                          :output-dir    "dist/out"
+                          :externs       ["react/externs/react.js"]
+                          :optimizations :simple
+                          :pretty-print  true}}}})
